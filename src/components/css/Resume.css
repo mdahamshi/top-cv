@@ -1,0 +1,35 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  
+  max-width: 400px;
+  
+}
+.app-main {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 32px;
+}
+.resume-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+footer {
+  margin-top: auto;
+}
+
+@media only screen and (min-width: 700px) {
+.resume-fields {
+  display: flex;
+  flex-direction: row;
+  
+  gap: 44px;
+}
+
+
+}

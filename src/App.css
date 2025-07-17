@@ -1,42 +1,68 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+p {
+  margin-bottom: 16px;
+  line-height: 1.5;
+  word-spacing: 3px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+  margin-bottom: 24px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+:root {
+  --lite-gray: #f0f1f4;
+  --label-width: 120px;
+  --sb-theme-color: #3080e8;
+  --sb-conent-bg: #fcf9f8;
+  --sb-corner-radius: 12px;
+  --sb-padding: 16px;
+  --sb-max-content-width: 1024px;
+  --sb-border-color-thin: #f0f1f4;
+  --sb-hero-bgc: #0891b2;
 }
 
-.card {
-  padding: 2em;
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.read-the-docs {
-  color: #888;
+
+footer.flex-col {
+  margin-top: auto;
+  color: white;
+  padding: 8px;
+  gap: 0;
+  background-color: var(--sb-theme-color);
+}
+
+.flex-row {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }

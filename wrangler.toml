@@ -1,0 +1,5 @@
+name = "top-cv"
+compatibility_date = "2025-07-17"
+
+[site]
+bucket = "./dist"
