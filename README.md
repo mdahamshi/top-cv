@@ -1,4 +1,3 @@
-
 # React Base Template ⚛️🚀
 
 A minimal, fast, and modern **React + Vite** starter template — perfect for bootstrapping new front-end projects.
@@ -17,8 +16,8 @@ A minimal, fast, and modern **React + Vite** starter template — perfect for bo
 Clone this repo:
 
 ```bash
-git clone https://github.com/mdahamshi/react-base.git
-cd react-base
+git clone https://github.com/mdahamshi/top-cv.git
+cd top-cv
 npm install
 npm run dev
 ```
@@ -85,4 +84,3 @@ GitHub: [@mdahamshi](https://github.com/mdahamshi)
 ---
 
 Enjoy building with React + Vite! ⚛️✨
-
