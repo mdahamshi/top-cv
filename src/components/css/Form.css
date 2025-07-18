@@ -1,7 +1,7 @@
 label {
   display: flex;
   flex-direction: row;
-  
+
   gap: 8px;
 }
 form h2 {
@@ -29,20 +29,41 @@ form input:focus {
 }
 
 .form-row {
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    flex-wrap: wrap;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
-.form-row input
- {
-    background-color: #FFFFFF;
-    border: 1px solid var(--lite-gray);
-    border-radius: 3px;
-    width: 100%;
-    padding: 7px;
-    font-size: 14px;
-    color: black;
+.form-row input {
+  background-color: #ffffff;
+  border: 1px solid var(--lite-gray);
+  border-radius: 3px;
+  width: 100%;
+  padding: 7px;
+  font-size: 14px;
+  color: black;
+}
+textarea {
+  width: 100%;
+  min-height: 180px;
+  padding: 12px 14px;
+  font-size: 1rem;
+  font-family: inherit;
+  line-height: 1.5;
+  border: 1px solid var(--lite-gray);
+  border-radius: 3px;
+  background-color: #fff;
+  resize: vertical;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+textarea:focus {
+  border-color: var(--sb-theme-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
 }

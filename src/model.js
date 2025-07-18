@@ -1,16 +1,14 @@
-
-
 export class ResumeData {
   general = {
     firstName: '',
     lastName: '',
     email: '',
-    phone: ''
-  }
+    phone: '',
+  };
   school = {
     name: '',
     titleStudy: '',
-    date: ''
+    date: '',
   };
 
   work = [];

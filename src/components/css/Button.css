@@ -1,0 +1,38 @@
+.clickable:hover,
+button:hover {
+  filter: brightness(1.1);
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: all 0.3s ease;
+}
+
+button:focus-visible,
+button:focus {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+button.sb-button {
+  border-radius: var(--sb-corner-radius);
+  color: white;
+  background-color: var(--sb-theme-color);
+  padding: 10px;
+  outline: none;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  white-space: nowrap;
+}
+
+button:active,
+.clickable:active,
+.clickable {
+  filter: brightness(0.9);
+  transform: scale(0.98);
+}

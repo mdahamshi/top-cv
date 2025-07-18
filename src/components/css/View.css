@@ -1,0 +1,63 @@
+.view-main {
+  display: flex;
+  flex-direction: column;
+  max-width: 980px;
+  width: 100%;
+}
+
+.name {
+  background-color: var(--sb-theme-color);
+  color: white;
+  padding: 48px;
+  width: 100%;
+}
+.name h1 {
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+  /* word-break: break-word; */
+  font-size: 10vw;
+}
+.flex-col.general-info {
+  gap: 0;
+}
+.email-phone {
+  justify-content: space-between;
+  background-color: var(--sb-theme-color);
+  color: white;
+  filter: opacity(0.7);
+  padding: 16px;
+  font-weight: bold;
+}
+.sb-icon {
+  width: 32px;
+}
+.sb-icon-white {
+  width: 22px;
+}
+.sb-icon path {
+  fill: var(--sb-theme-color);
+}
+.sb-icon-white path {
+  fill: white;
+}
+.cv-block {
+  padding: 32px;
+}
+.sb-spacer {
+  border-bottom: 3px solid var(--sb-theme-color);
+}
+.block-header h2 {
+  color: var(--sb-theme-color);
+  text-transform: uppercase;
+}
+.block-header {
+  margin-bottom: -15px;
+}
+.block-text {
+  word-spacing: 3px;
+  line-height: 1.5;
+}
+.flex-row.experince-header {
+  gap: 8px;
+}

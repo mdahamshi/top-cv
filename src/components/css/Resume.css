@@ -1,9 +1,8 @@
 .section {
   display: flex;
   flex-direction: column;
-  
+
   max-width: 400px;
-  
 }
 .app-main {
   margin: auto;
@@ -24,12 +23,10 @@ footer {
 }
 
 @media only screen and (min-width: 700px) {
-.resume-fields {
-  display: flex;
-  flex-direction: row;
-  
-  gap: 44px;
-}
+  .resume-fields {
+    display: flex;
+    flex-direction: row;
 
-
+    gap: 44px;
+  }
 }
