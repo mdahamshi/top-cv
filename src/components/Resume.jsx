@@ -4,33 +4,48 @@ import Study from './Study.jsx';
 import Work from './Work.jsx';
 import View from './View.jsx';
 import './css/Button.css';
-
+import {
+  sampleExperince,
+  sampleEdu,
+  sampleGeneralInfo,
+} from '../assets/data.jsx';
 import './css/Resume.css';
 import './css/Form.css';
-import { getRandomColor } from '@sarawebs/sb-utils';
+import { generateID, getRandomColor } from '@sarawebs/sb-utils';
 export default function Resume() {
   const [isEditing, setIsEditing] = useState(true);
 
-  const [generalInfo, setGeneralInfo] = useState({
-    name: 'Mohammad Dahamshi',
-    email: 'mohammad.dahamshi@gmail.com',
-    phone: '0586776939',
-    about:
-      'Hi, I’m Mohammad Dahamshi, a passionate software engineer and creative problem solver with a deep love for clean code, elegant design, and building things that work. I specialize in full-stack development, embedded systems, and DevOps, combining my technical expertise with a sharp eye for usability and performance.',
-  });
-  const [education, setEducation] = useState({
-    school: 'University Of Haifa',
-    study: 'Computer Science BSc',
-    date: '2017',
-  });
-  const [experience, setExperience] = useState({
-    company: 'Plaqless',
-    position: 'SW embedded',
-    responsibilities:
-      'Worked at Plaqless as a SysAdmin and Embedded C Developer, managing Linux systems and developing real-time firmware for smart dental devices.',
-    to: '2022',
-    from: '2017',
-  });
+  const [generalInfo, setGeneralInfo] = useState(sampleGeneralInfo);
+  const [education, setEducation] = useState(sampleEdu);
+  const [experience, setExperience] = useState(sampleExperince);
+  const onWorkAdd = () => {
+    setExperience([
+      ...experience,
+      {
+        company: '',
+        position: '',
+        responsibilities: '',
+        from: '',
+        to: '',
+        open: true,
+        id: generateID('experince'),
+      },
+    ]);
+  };
+  const onDelete = (idx) => {
+    const newExperince = experience.filter((_, i) => i !== idx);
+    setExperience(newExperince);
+  };
+  const onWorkChange = (idx, field, value) => {
+    const newExperince = [...experience];
+    newExperince[idx][field] = value;
+    setExperience(newExperince);
+  };
+  const toggleCard = (index) => {
+    const newExperince = [...experience];
+    newExperince[index].open = !experience[index].open;
+    setExperience(newExperince);
+  };
   const colorize = () => {
     document.documentElement.style.setProperty(
       '--sb-theme-color',
@@ -57,7 +72,7 @@ export default function Resume() {
       {isEditing ? (
         <>
           <h1>CV Application</h1>
-          <div className="resume-fields">
+          <div className="resume-fields sb-smooth-appear">
             <General
               data={generalInfo}
               onChange={(field, value) =>
@@ -71,21 +86,20 @@ export default function Resume() {
               }
             />
             <Work
-              data={experience}
-              onChange={(field, value) =>
-                setExperience({ ...experience, [field]: value })
-              }
+              dataArr={experience}
+              onAdd={onWorkAdd}
+              onChange={onWorkChange}
+              toggleCard={toggleCard}
+              onDelete={onDelete}
             />
           </div>
         </>
       ) : (
-        <>
-          <View
-            generalInfo={generalInfo}
-            education={education}
-            experience={experience}
-          />
-        </>
+        <View
+          generalInfo={generalInfo}
+          education={education}
+          experienceArr={experience}
+        />
       )}
     </div>
   );

@@ -1,7 +1,7 @@
 import './css/View.css';
-export default function View({ generalInfo, education, experience }) {
+export default function View({ generalInfo, education, experienceArr }) {
   return (
-    <section className="view-main sb-shadow">
+    <section className="view-main sb-shadow sb-smooth-appear">
       <div className="flex-col general-info">
         <div className="name">
           <h1> {generalInfo.name}</h1>
@@ -60,13 +60,17 @@ export default function View({ generalInfo, education, experience }) {
           <h2>Experience</h2>
         </div>
         <span className="sb-spacer"></span>
-        <div className="flex-row experince-header">
-          <h3>{experience.company}</h3>|<h3>{experience.position}</h3>|
-          <h3>
-            {experience.from} - {experience.to}
-          </h3>
-        </div>
-        <div className="block-text">{experience.responsibilities}</div>
+        {experienceArr.map((experience) => (
+          <div key={experience.id}>
+            <div className="flex-row experince-header">
+              <h3>{experience.company}</h3>|<h3>{experience.position}</h3>|
+              <h3>
+                {experience.from} - {experience.to}
+              </h3>
+            </div>
+            <div className="block-text">{experience.responsibilities}</div>
+          </div>
+        ))}
       </div>
 
       <div className="flex-col cv-block">

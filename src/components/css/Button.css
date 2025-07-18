@@ -28,6 +28,9 @@ button.sb-button {
   font-size: 16px;
   border: none;
   white-space: nowrap;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
 }
 
 button:active,
@@ -35,4 +38,16 @@ button:active,
 .clickable {
   filter: brightness(0.9);
   transform: scale(0.98);
+}
+
+.sb-button.danger {
+  background-color: red;
+}
+
+.sb-button-card {
+  border-radius: 15px;
+  padding: 32px;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 7px 5px 30px rgba(72, 73, 121, 0.15);
 }
