@@ -13,7 +13,7 @@ import './css/Resume.css';
 import './css/Form.css';
 import { generateID, getRandomColor } from '@sarawebs/sb-utils';
 export default function Resume() {
-  const [isEditing, setIsEditing] = useState(true);
+  const [isEditing, setIsEditing] = useState(false);
 
   const [generalInfo, setGeneralInfo] = useState(sampleGeneralInfo);
   const [education, setEducation] = useState(sampleEdu);
