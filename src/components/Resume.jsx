@@ -12,7 +12,7 @@ export default function Resume() {
   const [isEditing, setIsEditing] = useState(true);
 
   const [generalInfo, setGeneralInfo] = useState({
-    name: 'Mohammad Da',
+    name: 'Mohammad Dahamshi',
     email: 'mohammad.dahamshi@gmail.com',
     phone: '0586776939',
     about:
